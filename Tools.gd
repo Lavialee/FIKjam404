@@ -28,6 +28,7 @@ func _on_Voda_pressed():
 			$RichTextLabel.set_text("Nic nedrzis")
 	else:
 		 $RichTextLabel.set_text("Nemozny move")
+		
 func _on_Bible_pressed():
 	countBible += 1 
 	if countVoda + countSul + countKriz == 0:
