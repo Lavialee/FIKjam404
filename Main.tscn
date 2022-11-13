@@ -13,6 +13,41 @@ _data = {
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
+mob_scene = ExtResource( 3 )
+
+[node name="background" type="TextureRect" parent="."]
+visible = false
+margin_right = 1028.0
+margin_bottom = 768.0
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Table" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 600, 352 )
+scale = Vector2( 4, 5 )
+curve = SubResource( 1 )
+
+[node name="BabyFollow" type="PathFollow2D" parent="Path2D"]
+position = Vector2( -22, 120 )
+rotation = 1.5708
+rotate = false
+loop = false
+script = ExtResource( 5 )
+
+[node name="Baby" parent="Path2D/BabyFollow" instance=ExtResource( 3 )]
+position = Vector2( -147.2, 1.52588e-05 )
+rotation = -1.5708
+scale = Vector2( 1, 1 )
 
 [node name="Tools" type="Control" parent="."]
 margin_top = 520.0
@@ -65,39 +100,6 @@ margin_top = -512.0
 margin_right = 1016.0
 margin_bottom = -472.0
 text = "You have selected:"
-
-[node name="Table" type="TextureRect" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="background" type="TextureRect" parent="."]
-margin_right = 1028.0
-margin_bottom = 768.0
-texture = ExtResource( 4 )
-stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 600, 352 )
-scale = Vector2( 4, 5 )
-curve = SubResource( 1 )
-
-[node name="BabyFollow" type="PathFollow2D" parent="Path2D"]
-position = Vector2( -22, 120 )
-rotation = 1.5708
-rotate = false
-loop = false
-script = ExtResource( 5 )
-
-[node name="Baby" parent="Path2D/BabyFollow" instance=ExtResource( 3 )]
-position = Vector2( 0.42078, 0.035202 )
-rotation = -1.5708
-scale = Vector2( 1, 1 )
 
 [node name="TimeLimit" type="Timer" parent="."]
 

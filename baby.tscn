@@ -1,20 +1,40 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/icon.png" type="Texture" id=1]
 [ext_resource path="res://baby.gd" type="Script" id=2]
+[ext_resource path="res://assets/icon3.png" type="Texture" id=3]
+[ext_resource path="res://assets/icon2.png" type="Texture" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
+"frames": [  ],
+"loop": true,
+"name": "biblicke",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 1 ), null ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "krizove",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "slane",
+"speed": 3.0
 } ]
 
 [node name="Baby" type="KinematicBody2D"]
 position = Vector2( 512, 216 )
 scale = Vector2( 4, 5 )
+collision_mask = 0
 script = ExtResource( 2 )
 
-[node name="animation" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
+frame = 1
+playing = true
