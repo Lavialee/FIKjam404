@@ -1,22 +1,15 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Tools.gd" type="Script" id=1]
 [ext_resource path="res://Main.gd" type="Script" id=2]
 [ext_resource path="res://baby.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/background.png" type="Texture" id=4]
-[ext_resource path="res://BabyFollow.gd" type="Script" id=5]
-
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, -22, 120, 0, 0, 0, 0, -22, -11.2 )
-}
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 2 )
-mob_scene = ExtResource( 3 )
+baby_scene = ExtResource( 3 )
 
 [node name="background" type="TextureRect" parent="."]
-visible = false
 margin_right = 1028.0
 margin_bottom = 768.0
 texture = ExtResource( 4 )
@@ -32,67 +25,44 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 600, 352 )
-scale = Vector2( 4, 5 )
-curve = SubResource( 1 )
-
-[node name="BabyFollow" type="PathFollow2D" parent="Path2D"]
-position = Vector2( -22, 120 )
-rotation = 1.5708
-rotate = false
-loop = false
-script = ExtResource( 5 )
-
-[node name="Baby" parent="Path2D/BabyFollow" instance=ExtResource( 3 )]
-position = Vector2( -147.2, 1.52588e-05 )
-rotation = -1.5708
-scale = Vector2( 1, 1 )
-
 [node name="Tools" type="Control" parent="."]
 margin_top = 520.0
 margin_right = 1024.0
 margin_bottom = 770.0
+rect_min_size = Vector2( 10, 0 )
 script = ExtResource( 1 )
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Tools"]
-margin_left = 64.0
-margin_top = -6.0
-margin_right = 960.0
-margin_bottom = 184.0
-size_flags_horizontal = 0
-size_flags_vertical = 0
-size_flags_stretch_ratio = 13.46
-custom_constants/separation = 120
-alignment = 1
+[node name="Voda" type="Panel" parent="Tools"]
+margin_left = 56.0
+margin_top = 33.0
+margin_right = 256.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 200, 100 )
+focus_mode = 2
 
-[node name="Voda" type="Button" parent="Tools/HBoxContainer"]
-margin_right = 134.0
-margin_bottom = 190.0
-size_flags_horizontal = 3
-text = "VODA"
+[node name="Sul" type="Panel" parent="Tools"]
+margin_left = 296.0
+margin_top = 33.0
+margin_right = 496.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 200, 100 )
+focus_mode = 2
 
-[node name="Bible" type="Button" parent="Tools/HBoxContainer"]
-margin_left = 254.0
-margin_right = 388.0
-margin_bottom = 190.0
-size_flags_horizontal = 3
-text = "BIBLE"
+[node name="Kriz" type="Panel" parent="Tools"]
+margin_left = 536.0
+margin_top = 33.0
+margin_right = 736.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 200, 100 )
+focus_mode = 2
 
-[node name="Sul" type="Button" parent="Tools/HBoxContainer"]
-margin_left = 508.0
-margin_right = 642.0
-margin_bottom = 190.0
-rect_pivot_offset = Vector2( -1482, -312 )
-size_flags_horizontal = 3
-text = "SUL"
-
-[node name="Kriz" type="Button" parent="Tools/HBoxContainer"]
-margin_left = 762.0
-margin_right = 896.0
-margin_bottom = 190.0
-size_flags_horizontal = 3
-text = "KRIZ"
+[node name="Bible" type="Panel" parent="Tools"]
+margin_left = 776.0
+margin_top = 33.0
+margin_right = 976.0
+margin_bottom = 223.0
+rect_min_size = Vector2( 200, 100 )
+focus_mode = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Tools"]
 margin_left = 872.0
@@ -102,8 +72,3 @@ margin_bottom = -472.0
 text = "You have selected:"
 
 [node name="TimeLimit" type="Timer" parent="."]
-
-[connection signal="pressed" from="Tools/HBoxContainer/Voda" to="Tools" method="_on_Voda_pressed"]
-[connection signal="pressed" from="Tools/HBoxContainer/Bible" to="Tools" method="_on_Bible_pressed"]
-[connection signal="pressed" from="Tools/HBoxContainer/Sul" to="Tools" method="_on_Sul_pressed"]
-[connection signal="pressed" from="Tools/HBoxContainer/Kriz" to="Tools" method="_on_Kriz_pressed"]

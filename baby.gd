@@ -1,16 +1,21 @@
-extends Node
-
-export(PackedScene) var mob_scene
-var score
-
+extends AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$AnimatedSprite.playing = true
-	var baby_types = $AnimatedSprite.frames.get_animation_names()
-	$AnimatedSprite.animation = baby_types[randi() % baby_types.size()]
-	print(baby_types)
-	print(baby_types[randi() % baby_types.size()])
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	spawnBaby()
+	
+func spawnBaby():
+	self.play("BabyAnimation")
+	return
+
+
+#func _physics_process(delta):
+#	velocity = (target - position).normalized() * runSpeed
+#	velocity = move_and_slide(target)
+#		if (target - position).length() > 5:
+#		velocity = move_and_slide(velocity)
+#export (int) var speed = 200
+#func _input(event):
+#    if event.is_action_pressed('click'):
+#        target = get_global_mouse_position()
+#
