@@ -9,6 +9,8 @@
 script = ExtResource( 2 )
 baby_scene = ExtResource( 3 )
 
+[node name="AnimationPlayer" parent="." instance=ExtResource( 3 )]
+
 [node name="background" type="TextureRect" parent="."]
 margin_right = 1028.0
 margin_bottom = 768.0
@@ -72,3 +74,7 @@ margin_bottom = -472.0
 text = "You have selected:"
 
 [node name="TimeLimit" type="Timer" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0

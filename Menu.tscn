@@ -1,0 +1,116 @@
+[gd_scene load_steps=72 format=2]
+
+[ext_resource path="res://assets/menu pozadi sekvence/background_00059 21.12.05.png" type="Texture" id=1]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00065 21.12.05.png" type="Texture" id=2]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00057 21.12.05.png" type="Texture" id=3]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00063 21.12.05.png" type="Texture" id=4]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00062 21.12.05.png" type="Texture" id=5]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00060 21.12.05.png" type="Texture" id=6]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00061 21.12.05.png" type="Texture" id=7]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00064 21.12.05.png" type="Texture" id=8]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00058 21.12.05.png" type="Texture" id=9]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00055 21.12.05.png" type="Texture" id=10]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00053 21.12.05.png" type="Texture" id=11]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00042 21.12.05.png" type="Texture" id=12]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00051 21.12.05.png" type="Texture" id=13]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00035 21.12.04.png" type="Texture" id=14]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00056 21.12.05.png" type="Texture" id=15]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00039 21.12.05.png" type="Texture" id=16]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00037 21.12.04.png" type="Texture" id=17]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00048 21.12.05.png" type="Texture" id=18]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00054 21.12.05.png" type="Texture" id=19]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00022 21.12.04.png" type="Texture" id=20]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00026 21.12.04.png" type="Texture" id=21]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00028 21.12.04.png" type="Texture" id=22]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00029 21.12.04.png" type="Texture" id=23]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00043 21.12.05.png" type="Texture" id=24]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00027 21.12.04.png" type="Texture" id=25]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00041 21.12.05.png" type="Texture" id=26]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00046 21.12.05.png" type="Texture" id=27]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00050 21.12.05.png" type="Texture" id=28]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00038 21.12.04.png" type="Texture" id=29]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00047 21.12.05.png" type="Texture" id=30]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00024 21.12.04.png" type="Texture" id=31]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00052 21.12.05.png" type="Texture" id=32]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00025 21.12.04.png" type="Texture" id=33]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00031 21.12.04.png" type="Texture" id=34]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00034 21.12.04.png" type="Texture" id=35]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00030 21.12.04.png" type="Texture" id=36]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00023 21.12.04.png" type="Texture" id=37]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00032 21.12.04.png" type="Texture" id=38]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00033 21.12.04.png" type="Texture" id=39]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00036 21.12.04.png" type="Texture" id=40]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00040 21.12.05.png" type="Texture" id=41]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00044 21.12.05.png" type="Texture" id=42]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00045 21.12.05.png" type="Texture" id=43]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00049 21.12.05.png" type="Texture" id=44]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00001 21.12.04.png" type="Texture" id=45]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00002 21.12.04.png" type="Texture" id=46]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00000 21.12.04.png" type="Texture" id=47]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00004 21.12.04.png" type="Texture" id=48]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00003 21.12.04.png" type="Texture" id=49]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00009 21.12.04.png" type="Texture" id=50]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00005 21.12.04.png" type="Texture" id=51]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00011 21.12.04.png" type="Texture" id=52]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00013 21.12.04.png" type="Texture" id=53]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00012 21.12.04.png" type="Texture" id=54]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00010 21.12.04.png" type="Texture" id=55]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00014 21.12.04.png" type="Texture" id=56]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00015 21.12.04.png" type="Texture" id=57]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00016 21.12.04.png" type="Texture" id=58]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00017 21.12.04.png" type="Texture" id=59]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00018 21.12.04.png" type="Texture" id=60]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00008 21.12.04.png" type="Texture" id=61]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00020 21.12.04.png" type="Texture" id=62]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00021 21.12.04.png" type="Texture" id=63]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00019 21.12.04.png" type="Texture" id=64]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00006 21.12.04.png" type="Texture" id=65]
+[ext_resource path="res://assets/menu pozadi sekvence/background_00007 21.12.04.png" type="Texture" id=66]
+[ext_resource path="res://assets/typo_0000_Vrstva-2.png" type="Texture" id=67]
+[ext_resource path="res://assets/typo_0001_Vrstva-3.png" type="Texture" id=68]
+[ext_resource path="res://assets/dvere open asset.png" type="Texture" id=69]
+[ext_resource path="res://assets/typo_0002_Vrstva-0.png" type="Texture" id=70]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 49 ), ExtResource( 48 ), ExtResource( 51 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 61 ), ExtResource( 50 ), ExtResource( 55 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 64 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 20 ), ExtResource( 37 ), ExtResource( 31 ), ExtResource( 33 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 36 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 14 ), ExtResource( 40 ), ExtResource( 17 ), ExtResource( 29 ), ExtResource( 16 ), ExtResource( 41 ), ExtResource( 26 ), ExtResource( 12 ), ExtResource( 24 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 27 ), ExtResource( 30 ), ExtResource( 18 ), ExtResource( 44 ), ExtResource( 28 ), ExtResource( 13 ), ExtResource( 32 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 10 ), ExtResource( 15 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 1 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 512.001, 383.999 )
+scale = Vector2( 1.41436, 1.41697 )
+frames = SubResource( 1 )
+frame = 46
+playing = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 214.0
+margin_top = 648.0
+margin_right = 411.0
+margin_bottom = 696.0
+icon = ExtResource( 70 )
+flat = true
+
+[node name="Button2" type="Sprite" parent="."]
+position = Vector2( 512, 166 )
+texture = ExtResource( 67 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 288 )
+scale = Vector2( 1.9116, 1.85978 )
+texture = ExtResource( 69 )
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 688.0
+margin_top = 648.0
+margin_right = 813.0
+margin_bottom = 693.0
+icon = ExtResource( 68 )
+flat = true
