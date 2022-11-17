@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="Howto" type="Node2D"]
+self_modulate = Color( 0.168627, 0.0470588, 0.0470588, 1 )

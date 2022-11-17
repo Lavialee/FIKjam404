@@ -1,0 +1,524 @@
+[gd_scene load_steps=91 format=2]
+
+[ext_resource path="res://assets/browsing_animation/browsing (1).png" type="Texture" id=1]
+[ext_resource path="res://assets/browsing_animation/browsing (2).png" type="Texture" id=2]
+[ext_resource path="res://assets/browsing_animation/browsing (9).png" type="Texture" id=3]
+[ext_resource path="res://assets/browsing_animation/browsing (5).png" type="Texture" id=4]
+[ext_resource path="res://assets/browsing_animation/browsing (3).png" type="Texture" id=5]
+[ext_resource path="res://assets/browsing_animation/browsing (4).png" type="Texture" id=6]
+[ext_resource path="res://assets/browsing_animation/browsing (7).png" type="Texture" id=7]
+[ext_resource path="res://assets/browsing_animation/browsing (8).png" type="Texture" id=8]
+[ext_resource path="res://assets/browsing_animation/browsing (6).png" type="Texture" id=9]
+[ext_resource path="res://assets/browsing_animation/browsing (10).png" type="Texture" id=10]
+[ext_resource path="res://scenes/game/browsing_scene.gd" type="Script" id=11]
+[ext_resource path="res://assets/sul_animation/sul (2).png" type="Texture" id=12]
+[ext_resource path="res://assets/sul_animation/sul (5).png" type="Texture" id=13]
+[ext_resource path="res://assets/sul_animation/sul (3).png" type="Texture" id=14]
+[ext_resource path="res://assets/sul_animation/sul (4).png" type="Texture" id=15]
+[ext_resource path="res://assets/sul_animation/sul (6).png" type="Texture" id=16]
+[ext_resource path="res://assets/sul_animation/sul (1).png" type="Texture" id=17]
+[ext_resource path="res://assets/sul_animation/sul (9).png" type="Texture" id=18]
+[ext_resource path="res://assets/sul_animation/sul (10).png" type="Texture" id=19]
+[ext_resource path="res://assets/sul_animation/sul (8).png" type="Texture" id=20]
+[ext_resource path="res://assets/sul_animation/sul (7).png" type="Texture" id=21]
+[ext_resource path="res://assets/kriz_animation/kriz (10).png" type="Texture" id=22]
+[ext_resource path="res://assets/kriz_animation/kriz (7).png" type="Texture" id=23]
+[ext_resource path="res://assets/kriz_animation/kriz (8).png" type="Texture" id=24]
+[ext_resource path="res://assets/kriz_animation/kriz (5).png" type="Texture" id=25]
+[ext_resource path="res://assets/kriz_animation/kriz (4).png" type="Texture" id=26]
+[ext_resource path="res://assets/kriz_animation/kriz (6).png" type="Texture" id=27]
+[ext_resource path="res://assets/kriz_animation/kriz (9).png" type="Texture" id=28]
+[ext_resource path="res://assets/voda_animation/voda (1).png" type="Texture" id=29]
+[ext_resource path="res://assets/voda_animation/voda (2).png" type="Texture" id=30]
+[ext_resource path="res://assets/bible_animation/bible (10).png" type="Texture" id=31]
+[ext_resource path="res://assets/bible_animation/bible (8).png" type="Texture" id=32]
+[ext_resource path="res://assets/bible_animation/bible (15).png" type="Texture" id=33]
+[ext_resource path="res://assets/bible_animation/bible (16).png" type="Texture" id=34]
+[ext_resource path="res://assets/bible_animation/bible (17).png" type="Texture" id=35]
+[ext_resource path="res://assets/voda_animation/voda (7).png" type="Texture" id=36]
+[ext_resource path="res://assets/kriz_animation/kriz (1).png" type="Texture" id=37]
+[ext_resource path="res://assets/kriz_animation/kriz (3).png" type="Texture" id=38]
+[ext_resource path="res://assets/voda_animation/voda (18).png" type="Texture" id=39]
+[ext_resource path="res://assets/voda_animation/voda (8).png" type="Texture" id=40]
+[ext_resource path="res://assets/voda_animation/voda (16).png" type="Texture" id=41]
+[ext_resource path="res://assets/bible_animation/bible (2).png" type="Texture" id=42]
+[ext_resource path="res://assets/bible_animation/bible (3).png" type="Texture" id=43]
+[ext_resource path="res://assets/bible_animation/bible (1).png" type="Texture" id=44]
+[ext_resource path="res://assets/voda_animation/voda (4).png" type="Texture" id=45]
+[ext_resource path="res://assets/voda_animation/voda (13).png" type="Texture" id=46]
+[ext_resource path="res://assets/voda_animation/voda (14).png" type="Texture" id=47]
+[ext_resource path="res://assets/voda_animation/voda (17).png" type="Texture" id=48]
+[ext_resource path="res://assets/bible_animation/bible (6).png" type="Texture" id=49]
+[ext_resource path="res://assets/bible_animation/bible (9).png" type="Texture" id=50]
+[ext_resource path="res://assets/voda_animation/voda (6).png" type="Texture" id=51]
+[ext_resource path="res://assets/bible_animation/bible (13).png" type="Texture" id=52]
+[ext_resource path="res://assets/voda_animation/voda (9).png" type="Texture" id=53]
+[ext_resource path="res://assets/voda_animation/voda (12).png" type="Texture" id=54]
+[ext_resource path="res://assets/voda_animation/voda (11).png" type="Texture" id=55]
+[ext_resource path="res://assets/bible_animation/bible (4).png" type="Texture" id=56]
+[ext_resource path="res://assets/bible_animation/bible (7).png" type="Texture" id=57]
+[ext_resource path="res://assets/bible_animation/bible (11).png" type="Texture" id=58]
+[ext_resource path="res://assets/bible_animation/bible (14).png" type="Texture" id=59]
+[ext_resource path="res://assets/kriz_animation/kriz (2).png" type="Texture" id=60]
+[ext_resource path="res://assets/voda_animation/voda (10).png" type="Texture" id=61]
+[ext_resource path="res://assets/bible_animation/bible (5).png" type="Texture" id=62]
+[ext_resource path="res://assets/bible_animation/bible (12).png" type="Texture" id=63]
+[ext_resource path="res://assets/voda_animation/voda (5).png" type="Texture" id=64]
+[ext_resource path="res://assets/voda_animation/voda (15).png" type="Texture" id=65]
+[ext_resource path="res://assets/voda_animation/voda (3).png" type="Texture" id=66]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("browsing_animating/animated_0:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("browsing_animating/animated_1:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("browsing_animating/animated_2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("browsing_animating/animated_3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "browsing_animation_0_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 9, 8, 7, 6 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "browsing_animation_1_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "browsing_animation_1_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 5, 4, 3 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "browsing_animation_2_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "browsing_animation_2_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "browsing_animation_3_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "grab_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "grab_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "grab_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "grab_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "put_down_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "put_down_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "put_down_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "put_down_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "use_0"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.8, 0.85, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8, 9, 8, 9, 8, 7, 6, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "use_1"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 7, 9, 10, 12, 13, 14, 15, 16, 17, 16, 17, 15, 14, 13, 12, 10, 9, 7, 5 ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "use_2"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.65, 0.7, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8, 9, 7, 8, 9, 8, 7, 6, 5 ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "use_3"
+length = 2.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.55, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 14, 13, 12, 11, 10, 9, 7, 6, 5, 4 ]
+}
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 3 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "default",
+"speed": 3.0
+} ]
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ ExtResource( 17 ), ExtResource( 12 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "0",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 66 ), ExtResource( 45 ), ExtResource( 64 ), ExtResource( 51 ), ExtResource( 36 ), ExtResource( 40 ), ExtResource( 53 ), ExtResource( 61 ), ExtResource( 55 ), ExtResource( 54 ), ExtResource( 46 ), ExtResource( 47 ), ExtResource( 65 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "1",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ ExtResource( 37 ), ExtResource( 60 ), ExtResource( 38 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 27 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "2",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ ExtResource( 44 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 56 ), ExtResource( 62 ), ExtResource( 49 ), ExtResource( 57 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 31 ), ExtResource( 58 ), ExtResource( 63 ), ExtResource( 52 ), ExtResource( 59 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+} ]
+
+[node name="browsing_animating" type="AnimationPlayer"]
+anims/RESET = SubResource( 1 )
+anims/browsing_animation_0_1 = SubResource( 2 )
+anims/browsing_animation_1_0 = SubResource( 4 )
+anims/browsing_animation_1_2 = SubResource( 5 )
+anims/browsing_animation_2_1 = SubResource( 6 )
+anims/browsing_animation_2_3 = SubResource( 7 )
+anims/browsing_animation_3_2 = SubResource( 8 )
+anims/grab_0 = SubResource( 9 )
+anims/grab_1 = SubResource( 11 )
+anims/grab_2 = SubResource( 12 )
+anims/grab_3 = SubResource( 13 )
+anims/put_down_0 = SubResource( 15 )
+anims/put_down_1 = SubResource( 19 )
+anims/put_down_2 = SubResource( 20 )
+anims/put_down_3 = SubResource( 21 )
+anims/use_0 = SubResource( 14 )
+anims/use_1 = SubResource( 22 )
+anims/use_2 = SubResource( 23 )
+anims/use_3 = SubResource( 24 )
+script = ExtResource( 11 )
+
+[node name="animated_browsing" type="AnimatedSprite" parent="."]
+position = Vector2( -133, 1266.8 )
+scale = Vector2( 0.711111, 0.666667 )
+frames = SubResource( 3 )
+frame = 9
+offset = Vector2( 907.031, -1324.21 )
+
+[node name="animated_0" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 512, 384 )
+scale = Vector2( 0.711111, 0.666667 )
+frames = SubResource( 10 )
+animation = "0"
+frame = 4
+
+[node name="animated_1" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 512, 384 )
+scale = Vector2( 0.711111, 0.666667 )
+frames = SubResource( 16 )
+animation = "1"
+frame = 5
+
+[node name="animated_2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 512, 384 )
+scale = Vector2( 0.711111, 0.666667 )
+frames = SubResource( 17 )
+animation = "2"
+frame = 5
+
+[node name="animated_3" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 512, 384 )
+scale = Vector2( 0.711111, 0.666667 )
+frames = SubResource( 18 )
+animation = "3"
+frame = 4

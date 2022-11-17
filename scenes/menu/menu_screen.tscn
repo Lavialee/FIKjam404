@@ -1,0 +1,127 @@
+[gd_scene load_steps=75 format=2]
+
+[ext_resource path="res://assets/menu_animation/background (1).png" type="Texture" id=1]
+[ext_resource path="res://assets/menu_animation/background (4).png" type="Texture" id=2]
+[ext_resource path="res://assets/menu_animation/background (6).png" type="Texture" id=3]
+[ext_resource path="res://assets/menu_animation/background (2).png" type="Texture" id=4]
+[ext_resource path="res://assets/menu_animation/background (5).png" type="Texture" id=5]
+[ext_resource path="res://assets/menu_animation/background (7).png" type="Texture" id=6]
+[ext_resource path="res://assets/menu_animation/background (3).png" type="Texture" id=7]
+[ext_resource path="res://assets/menu_animation/background (8).png" type="Texture" id=8]
+[ext_resource path="res://assets/menu_animation/background (9).png" type="Texture" id=9]
+[ext_resource path="res://assets/menu_animation/background (30).png" type="Texture" id=10]
+[ext_resource path="res://assets/menu_animation/background (32).png" type="Texture" id=11]
+[ext_resource path="res://assets/menu_animation/background (43).png" type="Texture" id=12]
+[ext_resource path="res://assets/menu_animation/background (42).png" type="Texture" id=13]
+[ext_resource path="res://assets/menu_animation/background (38).png" type="Texture" id=14]
+[ext_resource path="res://assets/menu_animation/background (37).png" type="Texture" id=15]
+[ext_resource path="res://assets/menu_animation/background (36).png" type="Texture" id=16]
+[ext_resource path="res://assets/menu_animation/background (35).png" type="Texture" id=17]
+[ext_resource path="res://assets/menu_animation/background (33).png" type="Texture" id=18]
+[ext_resource path="res://assets/menu_animation/background (28).png" type="Texture" id=19]
+[ext_resource path="res://assets/menu_animation/background (34).png" type="Texture" id=20]
+[ext_resource path="res://assets/menu_animation/background (39).png" type="Texture" id=21]
+[ext_resource path="res://assets/menu_animation/background (40).png" type="Texture" id=22]
+[ext_resource path="res://assets/menu_animation/background (41).png" type="Texture" id=23]
+[ext_resource path="res://assets/menu_animation/background (27).png" type="Texture" id=24]
+[ext_resource path="res://assets/menu_animation/background (29).png" type="Texture" id=25]
+[ext_resource path="res://assets/menu_animation/background (31).png" type="Texture" id=26]
+[ext_resource path="res://assets/menu_animation/background (60).png" type="Texture" id=27]
+[ext_resource path="res://assets/menu_animation/background (49).png" type="Texture" id=28]
+[ext_resource path="res://assets/menu_animation/background (53).png" type="Texture" id=29]
+[ext_resource path="res://assets/menu_animation/background (44).png" type="Texture" id=30]
+[ext_resource path="res://assets/menu_animation/background (66).png" type="Texture" id=31]
+[ext_resource path="res://assets/menu_animation/background (59).png" type="Texture" id=32]
+[ext_resource path="res://assets/menu_animation/background (46).png" type="Texture" id=33]
+[ext_resource path="res://assets/menu_animation/background (55).png" type="Texture" id=34]
+[ext_resource path="res://assets/menu_animation/background (58).png" type="Texture" id=35]
+[ext_resource path="res://assets/menu_animation/background (65).png" type="Texture" id=36]
+[ext_resource path="res://assets/menu_animation/background (52).png" type="Texture" id=37]
+[ext_resource path="res://assets/menu_animation/background (50).png" type="Texture" id=38]
+[ext_resource path="res://assets/menu_animation/background (47).png" type="Texture" id=39]
+[ext_resource path="res://assets/menu_animation/background (51).png" type="Texture" id=40]
+[ext_resource path="res://assets/menu_animation/background (57).png" type="Texture" id=41]
+[ext_resource path="res://assets/menu_animation/background (48).png" type="Texture" id=42]
+[ext_resource path="res://assets/menu_animation/background (45).png" type="Texture" id=43]
+[ext_resource path="res://assets/menu_animation/background (61).png" type="Texture" id=44]
+[ext_resource path="res://assets/menu_animation/background (62).png" type="Texture" id=45]
+[ext_resource path="res://assets/menu_animation/background (63).png" type="Texture" id=46]
+[ext_resource path="res://assets/menu_animation/background (54).png" type="Texture" id=47]
+[ext_resource path="res://assets/menu_animation/background (64).png" type="Texture" id=48]
+[ext_resource path="res://assets/menu_animation/background (56).png" type="Texture" id=49]
+[ext_resource path="res://assets/menu_animation/background (18).png" type="Texture" id=50]
+[ext_resource path="res://assets/menu_animation/background (21).png" type="Texture" id=51]
+[ext_resource path="res://assets/menu_animation/background (25).png" type="Texture" id=52]
+[ext_resource path="res://assets/menu_animation/background (26).png" type="Texture" id=53]
+[ext_resource path="res://assets/menu_animation/background (17).png" type="Texture" id=54]
+[ext_resource path="res://assets/menu_animation/background (23).png" type="Texture" id=55]
+[ext_resource path="res://assets/menu_animation/background (22).png" type="Texture" id=56]
+[ext_resource path="res://assets/menu_animation/background (11).png" type="Texture" id=57]
+[ext_resource path="res://assets/menu_animation/background (12).png" type="Texture" id=58]
+[ext_resource path="res://assets/menu_animation/background (14).png" type="Texture" id=59]
+[ext_resource path="res://assets/menu_animation/background (20).png" type="Texture" id=60]
+[ext_resource path="res://assets/menu_animation/background (19).png" type="Texture" id=61]
+[ext_resource path="res://assets/menu_animation/background (15).png" type="Texture" id=62]
+[ext_resource path="res://assets/menu_animation/background (13).png" type="Texture" id=63]
+[ext_resource path="res://assets/menu_animation/background (16).png" type="Texture" id=64]
+[ext_resource path="res://assets/menu_animation/background (24).png" type="Texture" id=65]
+[ext_resource path="res://assets/menu_animation/background (10).png" type="Texture" id=66]
+[ext_resource path="res://assets/menu_text/jak_hrat_selected.png" type="Texture" id=67]
+[ext_resource path="res://assets/menu_text/title.png" type="Texture" id=68]
+[ext_resource path="res://assets/menu_text/jak_hrat_unselected.png" type="Texture" id=69]
+[ext_resource path="res://assets/menu_text/zahajit_obrad_selected.png" type="Texture" id=70]
+[ext_resource path="res://assets/menu_text/zahajit_obrad_unselected.png" type="Texture" id=71]
+[ext_resource path="res://scenes/menu/menu_control.gd" type="Script" id=72]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 66 ), ExtResource( 57 ), ExtResource( 58 ), ExtResource( 63 ), ExtResource( 59 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 54 ), ExtResource( 50 ), ExtResource( 61 ), ExtResource( 60 ), ExtResource( 51 ), ExtResource( 56 ), ExtResource( 55 ), ExtResource( 65 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 24 ), ExtResource( 19 ), ExtResource( 25 ), ExtResource( 10 ), ExtResource( 26 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 30 ), ExtResource( 43 ), ExtResource( 33 ), ExtResource( 39 ), ExtResource( 42 ), ExtResource( 28 ), ExtResource( 38 ), ExtResource( 40 ), ExtResource( 37 ), ExtResource( 29 ), ExtResource( 47 ), ExtResource( 34 ), ExtResource( 49 ), ExtResource( 41 ), ExtResource( 35 ), ExtResource( 32 ), ExtResource( 27 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 36 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "background",
+"speed": 10.0
+} ]
+
+[sub_resource type="AnimatedTexture" id=3]
+flags = 4
+frames = 2
+frame_0/texture = ExtResource( 71 )
+frame_1/texture = ExtResource( 70 )
+frame_1/delay_sec = 0.0
+
+[node name="menu_control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 72 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 513.277, 384.5 )
+scale = Vector2( 1.41513, 1.41513 )
+frames = SubResource( 1 )
+animation = "background"
+frame = 63
+playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 168 )
+texture = ExtResource( 68 )
+
+[node name="jak_hrat" type="TextureButton" parent="."]
+margin_left = 648.0
+margin_top = 664.0
+margin_right = 761.0
+margin_bottom = 704.0
+texture_normal = ExtResource( 69 )
+texture_pressed = ExtResource( 69 )
+texture_focused = ExtResource( 67 )
+
+[node name="zahajit_obrad" type="TextureButton" parent="."]
+margin_left = 232.0
+margin_top = 664.0
+margin_right = 417.0
+margin_bottom = 704.0
+texture_normal = ExtResource( 71 )
+texture_pressed = SubResource( 3 )
+texture_focused = ExtResource( 70 )
+
+[connection signal="pressed" from="jak_hrat" to="." method="_on_jak_hrat_pressed"]
+[connection signal="pressed" from="zahajit_obrad" to="." method="_on_zahajit_obrad_pressed"]
