@@ -24,13 +24,21 @@ func start_game():
 	game_scene.connect("timerend", self, "high_score")
 	self.add_child(game_scene)
 
+func start_game_howto():
+	game_scene = game_main.instance()
+	howto.queue_free()
+	game_scene.connect("timerend", self, "high_score")
+	self.add_child(game_scene)
+
+
 func how_to():
 	menu.queue_free()
 	self.add_child(howto)
+	howto.connect("confirm", self,"start_game_howto")
 
 func high_score ():
 	game_scene.queue_free()
-	print("zavola taky highscore")
+	print("SEM NODE NA HIGHSCORE")
 	start_menu()
 	pass #vyresit specificky na fikmat
 	
