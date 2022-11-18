@@ -98,10 +98,10 @@ position = Vector2( 513.277, 384.5 )
 scale = Vector2( 1.41513, 1.41513 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 50
+frame = 14
 playing = true
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="name" type="Sprite" parent="."]
 position = Vector2( 512, 168 )
 texture = ExtResource( 68 )
 
@@ -122,6 +122,10 @@ margin_bottom = 704.0
 texture_normal = ExtResource( 71 )
 texture_pressed = SubResource( 3 )
 texture_focused = ExtResource( 70 )
+
+[node name="doors" type="Sprite" parent="."]
+position = Vector2( 513.277, 384.5 )
+scale = Vector2( 1.41513, 1.41513 )
 
 [connection signal="pressed" from="jak_hrat" to="." method="_on_jak_hrat_pressed"]
 [connection signal="pressed" from="zahajit_obrad" to="." method="_on_zahajit_obrad_pressed"]

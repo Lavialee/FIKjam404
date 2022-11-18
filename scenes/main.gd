@@ -11,6 +11,7 @@ var howto = game_howto.instance()
 func _ready():
 	randomize()
 	start_menu()
+	$menu_music.play()
 
 func start_menu():
 	menu = game_menu.instance()
@@ -19,12 +20,17 @@ func start_menu():
 	self.add_child(menu)
 
 func start_game():
+	$menu_music.stop()
+	$game_music.play()
+	$door.play()
 	game_scene = game_main.instance()
 	menu.queue_free()
 	game_scene.connect("timerend", self, "high_score")
 	self.add_child(game_scene)
 
 func start_game_howto():
+	$menu_music.stop()
+	$game_music.play()
 	game_scene = game_main.instance()
 	howto.queue_free()
 	game_scene.connect("timerend", self, "high_score")
@@ -32,6 +38,7 @@ func start_game_howto():
 
 
 func how_to():
+	$door.play()
 	menu.queue_free()
 	self.add_child(howto)
 	howto.connect("confirm", self,"start_game_howto")
