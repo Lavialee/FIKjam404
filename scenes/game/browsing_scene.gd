@@ -14,7 +14,6 @@ func browse_right_movement():
 	$animated_2.hide()
 	$animated_3.hide()
 	$animated_browsing.show()
-	item = get_parent().selected
 	var from = item - 1
 	self.play("browsing_animation_" + str(from) + "_" + str(item)) 
 	return
@@ -26,7 +25,6 @@ func browse_left_movement():
 	$animated_2.hide()
 	$animated_3.hide()
 	$animated_browsing.show()
-	item = get_parent().selected
 	var from = item + 1
 	self.play("browsing_animation_" + str(from) + "_" + str(item)) 
 	return

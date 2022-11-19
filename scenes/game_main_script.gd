@@ -44,26 +44,20 @@ func _on_Timer_timeout():
 	if time <=0:
 		$Timer.stop()
 		emit_signal("timerend")
-		print("konec")
 
 func hand_handle(state):
 	if state == 0:
 		pass
 	if state == 1:
 		browse.animate_grab()
-		print("vzít")
 		return
 
 	if state == 2:
 		browse.animate_use()
-		print("použít")
-		yield(browse,"animation_finished")
 		return
 
 	if state == 3:
 		browse.animate_put_down()
-		print("položit")
-		yield(browse,"animation_finished")
 		return
 	
 func check_correctness(state):
@@ -76,9 +70,6 @@ func check_correctness(state):
 				baby_animation2.baby_type(baby_type_node.baby)
 				babyExist = 1
 				score += 1
-#				baby_animation.baby_spawn()
-#				spawn_new_baby()
-#				baby_animation2.baby_spawn(baby_type_node.baby)
 				return
 			if baby_type_node.baby == 1 and babyExist == 1:
 				baby_animation2.baby_despawn()
@@ -98,6 +89,7 @@ func check_correctness(state):
 			print("incorrect")
 			time -= 5 
 			return
+
 func _process(delta):
 	$Text/Score.text = "Zachránils: "+str(score)
 	$Text/Time.text = "Hodiny: "+str(time)
