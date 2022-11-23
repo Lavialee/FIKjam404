@@ -380,7 +380,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=25]
-resource_name = "use_2"
+resource_name = "use_1"
 length = 1.25
 step = 0.05
 tracks/0/type = "value"
@@ -397,9 +397,21 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=23]
-resource_name = "use_22"
+resource_name = "use_2"
 length = 0.78
 step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browsing_animating/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.35, 0.45, 0.55, 0.6, 0.65, 0.7, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8, 9, 8, 9, 8, 7, 6, 5, 4 ]
+}
 
 [sub_resource type="Animation" id=24]
 resource_name = "use_3"
@@ -475,8 +487,8 @@ anims/put_down_1 = SubResource( 19 )
 anims/put_down_2 = SubResource( 20 )
 anims/put_down_3 = SubResource( 21 )
 anims/use_0 = SubResource( 14 )
-anims/use_2 = SubResource( 25 )
-anims/use_22 = SubResource( 23 )
+anims/use_1 = SubResource( 25 )
+anims/use_2 = SubResource( 23 )
 anims/use_3 = SubResource( 24 )
 script = ExtResource( 11 )
 
@@ -488,25 +500,31 @@ frame = 9
 offset = Vector2( 907.031, -1324.21 )
 
 [node name="animated_0" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 512, 384 )
 scale = Vector2( 0.711111, 0.666667 )
 frames = SubResource( 10 )
 animation = "0"
+frame = 9
 
 [node name="animated_1" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 512, 384 )
 scale = Vector2( 0.711111, 0.666667 )
 frames = SubResource( 16 )
 animation = "1"
-frame = 4
+frame = 15
 
 [node name="animated_2" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 512, 384 )
 scale = Vector2( 0.711111, 0.666667 )
 frames = SubResource( 17 )
 animation = "2"
+frame = 4
 
 [node name="animated_3" type="AnimatedSprite" parent="."]
+visible = false
 position = Vector2( 512, 384 )
 scale = Vector2( 0.711111, 0.666667 )
 frames = SubResource( 18 )

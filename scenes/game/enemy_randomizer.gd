@@ -9,7 +9,6 @@ func _ready():
 	randomize()
 	baby_type_randomizer()
 
-
 func baby_type_randomizer():
 	baby = (randi() % 4)
 	emit_signal("babychange")

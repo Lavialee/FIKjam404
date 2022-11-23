@@ -4,6 +4,7 @@ var item
 var hand
 var playing
 
+signal pokus
 func _ready():
 	$animated_browsing.show()
 	

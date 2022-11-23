@@ -1,6 +1,11 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/game_main_script.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game/background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/game/babies_scene.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/game/browsing_scene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/item_controls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/game/enemy_type.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/BaroqueTextJF.ttf"
@@ -9,8 +14,372 @@ font_path = "res://assets/BaroqueTextJF.ttf"
 size = 40
 font_data = SubResource( 1 )
 
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 9 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("browse/animated_0:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("browse/animated_1:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("browse/animated_2:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("browse/animated_3:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "browsing_animation_0_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 9, 8, 7, 6 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "browsing_animation_1_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 6, 7, 8, 9 ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "browsing_animation_1_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 6, 5, 4, 3 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "browsing_animation_2_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 4, 5, 6 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "browsing_animation_2_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "browsing_animation_3_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_browsing:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "grab_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "grab_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "grab_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "grab_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "put_down_0"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "put_down_1"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "put_down_2"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "put_down_3"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "use_0"
+length = 0.95
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 0.8, 0.85, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 8, 9, 8, 9, 8, 7, 6, 5, 4 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "use_2"
+length = 1.15
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 7, 9, 10, 12, 13, 14, 15, 16, 17, 16, 17, 15, 14, 13, 12, 10, 9, 7, 5 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "use_22"
+length = 0.8
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.6, 0.65, 0.7, 0.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 5, 6, 7, 8, 9, 7, 8, 9, 8, 7, 6, 5 ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "use_3"
+length = 1.35
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("browse/animated_3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.5, 0.55, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 14, 13, 12, 11, 10, 9, 7, 6, 5, 4 ]
+}
+
 [node name="game" type="Node2D"]
 script = ExtResource( 1 )
+
+[node name="controls" parent="." instance=ExtResource( 5 )]
+
+[node name="baby_type" parent="." instance=ExtResource( 6 )]
+
+[node name="background_image" parent="." instance=ExtResource( 2 )]
+
+[node name="Yielder" type="Timer" parent="."]
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -34,4 +403,34 @@ margin_bottom = 87.0
 custom_fonts/font = SubResource( 2 )
 text = "Zachránils:"
 
+[node name="baby_animation_node0" parent="." instance=ExtResource( 3 )]
+scale = Vector2( 1.32124, 1.32124 )
+
+[node name="baby_animation_node1" parent="." instance=ExtResource( 3 )]
+
+[node name="browse" parent="." instance=ExtResource( 4 )]
+anims/RESET = SubResource( 3 )
+anims/browsing_animation_0_1 = SubResource( 4 )
+anims/browsing_animation_1_0 = SubResource( 5 )
+anims/browsing_animation_1_2 = SubResource( 6 )
+anims/browsing_animation_2_1 = SubResource( 7 )
+anims/browsing_animation_2_3 = SubResource( 8 )
+anims/browsing_animation_3_2 = SubResource( 9 )
+anims/grab_0 = SubResource( 10 )
+anims/grab_1 = SubResource( 11 )
+anims/grab_2 = SubResource( 12 )
+anims/grab_3 = SubResource( 13 )
+anims/put_down_0 = SubResource( 14 )
+anims/put_down_1 = SubResource( 15 )
+anims/put_down_2 = SubResource( 16 )
+anims/put_down_3 = SubResource( 17 )
+anims/use_0 = SubResource( 18 )
+anims/use_2 = SubResource( 19 )
+anims/use_22 = SubResource( 20 )
+anims/use_3 = SubResource( 21 )
+
+[connection signal="browseleft" from="controls" to="." method="_on_control_items_browseleft"]
+[connection signal="browseright" from="controls" to="." method="_on_controls_browseright"]
+[connection signal="handconfirm" from="controls" to="." method="_on_controls_handconfirm"]
+[connection signal="handuse" from="controls" to="." method="_on_controls_handuse"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
