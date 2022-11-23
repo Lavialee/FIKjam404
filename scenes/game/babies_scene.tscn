@@ -65,10 +65,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 1 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 672, 400 ), Vector2( 672, 400 ), Vector2( 151, 952 ) ]
+"values": [ Vector2( 672, 400 ), Vector2( 151, 952 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -80,7 +80,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.9 ),
+"times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 1193, 914 ), Vector2( 672, 400 ) ]

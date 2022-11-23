@@ -21,7 +21,7 @@ func _ready():
 	baby_animation0.baby_type(baby_type.baby)
 #	yielder = yielder_func()
 
-func _on_control_items_browseleft():
+func _on_controls_browseleft():
 	selected -= 1
 	browse.browse_left_movement()
 
@@ -48,12 +48,6 @@ func _on_controls_handuse():
 		pass #animate use, stall until finished, check correctness, state stays
 	else:
 		pass
-#
-#func end_animation(bleble):
-#	print("hehe")
-#
-#func yielder_func():
-#	browse.connect("animation_finished", self, "end_animation")
 
 func _on_Timer_timeout():
 	time -= 1
@@ -97,3 +91,4 @@ func _process(_delta):
 
 func _on_browse_animation_finished(anim_name):
 	print(anim_name)
+

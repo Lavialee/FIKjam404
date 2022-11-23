@@ -101,11 +101,8 @@ position = Vector2( 513.277, 384.5 )
 scale = Vector2( 1.41513, 1.41513 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 35
+frame = 37
 playing = true
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="name" type="Sprite" parent="."]
 position = Vector2( 512, 168 )
@@ -130,9 +127,8 @@ texture_pressed = SubResource( 3 )
 texture_focused = ExtResource( 70 )
 
 [node name="door_sprite" type="Sprite" parent="."]
-visible = false
-position = Vector2( 472, 653 )
-scale = Vector2( 2.16613, 1.95331 )
+position = Vector2( 469, 655 )
+scale = Vector2( 1.79847, 1.67053 )
 texture = ExtResource( 75 )
 
 [node name="how_to" type="TextureRect" parent="."]

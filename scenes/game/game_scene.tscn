@@ -1,11 +1,11 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/game_main_script.gd" type="Script" id=1]
-[ext_resource path="res://scenes/game/background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/game/babies_scene.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/game/browsing_scene.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/game/item_controls.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/game/enemy_type.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/game/babies_scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/game/item_controls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/game/enemy_type.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/game/background.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/game/browsing_scene.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/BaroqueTextJF.ttf"
@@ -303,7 +303,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=18]
 resource_name = "use_0"
-length = 0.95
+length = 2.0
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("browse/animated_0:frame")
@@ -319,9 +319,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=19]
-resource_name = "use_2"
-length = 1.15
-loop = true
+resource_name = "use_1"
+length = 2.0
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("browse/animated_1:frame")
@@ -337,8 +336,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=20]
-resource_name = "use_22"
-length = 0.8
+resource_name = "use_2"
+length = 2.0
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("browse/animated_2:frame")
@@ -355,7 +354,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=21]
 resource_name = "use_3"
-length = 1.35
+length = 2.0
 step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("browse/animated_3:frame")
@@ -373,13 +372,11 @@ tracks/0/keys = {
 [node name="game" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="controls" parent="." instance=ExtResource( 5 )]
+[node name="controls" parent="." instance=ExtResource( 3 )]
 
-[node name="baby_type" parent="." instance=ExtResource( 6 )]
+[node name="baby_type" parent="." instance=ExtResource( 4 )]
 
-[node name="background_image" parent="." instance=ExtResource( 2 )]
-
-[node name="Yielder" type="Timer" parent="."]
+[node name="background_image" parent="." instance=ExtResource( 5 )]
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -403,12 +400,11 @@ margin_bottom = 87.0
 custom_fonts/font = SubResource( 2 )
 text = "Zachránils:"
 
-[node name="baby_animation_node0" parent="." instance=ExtResource( 3 )]
-scale = Vector2( 1.32124, 1.32124 )
+[node name="baby_animation_node0" parent="." instance=ExtResource( 2 )]
 
-[node name="baby_animation_node1" parent="." instance=ExtResource( 3 )]
+[node name="baby_animation_node1" parent="." instance=ExtResource( 2 )]
 
-[node name="browse" parent="." instance=ExtResource( 4 )]
+[node name="browse" parent="." instance=ExtResource( 6 )]
 anims/RESET = SubResource( 3 )
 anims/browsing_animation_0_1 = SubResource( 4 )
 anims/browsing_animation_1_0 = SubResource( 5 )
@@ -425,11 +421,11 @@ anims/put_down_1 = SubResource( 15 )
 anims/put_down_2 = SubResource( 16 )
 anims/put_down_3 = SubResource( 17 )
 anims/use_0 = SubResource( 18 )
-anims/use_2 = SubResource( 19 )
-anims/use_22 = SubResource( 20 )
+anims/use_1 = SubResource( 19 )
+anims/use_2 = SubResource( 20 )
 anims/use_3 = SubResource( 21 )
 
-[connection signal="browseleft" from="controls" to="." method="_on_control_items_browseleft"]
+[connection signal="browseleft" from="controls" to="." method="_on_controls_browseleft"]
 [connection signal="browseright" from="controls" to="." method="_on_controls_browseright"]
 [connection signal="handconfirm" from="controls" to="." method="_on_controls_handconfirm"]
 [connection signal="handuse" from="controls" to="." method="_on_controls_handuse"]
