@@ -1,14 +1,33 @@
 extends Control
 
 signal startgame
-signal howto
+
+var showing = 0
 
 func _ready():
 	$zahajit_obrad.grab_focus()
 
 func _on_jak_hrat_pressed():
-	emit_signal("howto")
+	if showing == 0:
+		$how_to.show()
+		showing = 1
+		return
+
+	elif showing == 1:
+		$how_to.hide()
+		showing = 0
+		return
 
 func _on_zahajit_obrad_pressed():
-	emit_signal("startgame")
+	if showing == 0:
+		$door_sprite.show()
+		$door_sound.play()
+		yield(get_tree().create_timer(1.8), "timeout")
+		emit_signal("startgame")
+		return
+
+	elif showing == 1:
+		$how_to.hide()
+		showing = 0
+		return
 
