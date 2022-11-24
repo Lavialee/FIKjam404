@@ -22,7 +22,6 @@ func _on_zahajit_obrad_pressed():
 	if showing == 0:
 		$door_sprite.show()
 		$door_sound.play()
-		yield(get_tree().create_timer(1.8), "timeout")
 		emit_signal("startgame")
 		return
 
