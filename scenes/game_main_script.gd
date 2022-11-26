@@ -8,7 +8,7 @@ onready var baby_type = $baby_type
 onready var baby_animation0 = $baby_animation_node0
 onready var baby_animation1 = $baby_animation_node1
 
-var time = 3
+var time = 90
 var score = 0
 
 var selected = 0
@@ -57,7 +57,7 @@ func _on_Timer_timeout():
 	time -= 1
 	if time <=0:
 		$Timer.stop()
-		emit_signal("timerend")
+		emit_signal("timerend", score)
 
 func check_correctness():
 	if selected == baby_type.baby:

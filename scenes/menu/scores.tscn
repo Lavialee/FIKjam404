@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/menu/scores.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://assets/BaroqueTextJF.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 1 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 768.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Hrát" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 224.0
+margin_top = 624.0
+margin_right = 848.0
+margin_bottom = 687.0
+custom_fonts/font = SubResource( 2 )
+text = "Stiskni cokoliv pro návrat do menu"
+
+[node name="Spaseno" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 408.0
+margin_top = 264.0
+margin_right = 605.0
+margin_bottom = 327.0
+custom_fonts/font = SubResource( 2 )
+text = "Spaseno:"
+align = 1
+autowrap = true

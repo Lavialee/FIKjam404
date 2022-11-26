@@ -97,38 +97,53 @@ anchor_bottom = 1.0
 script = ExtResource( 72 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 513.277, 384.5 )
-scale = Vector2( 1.41513, 1.41513 )
+position = Vector2( 640.5, 512.5 )
+scale = Vector2( 1.76657, 1.88745 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 40
+frame = 1
 playing = true
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="name" type="Sprite" parent="."]
-position = Vector2( 512, 168 )
+position = Vector2( 674, 144 )
+scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 68 )
 
-[node name="jak_hrat" type="TextureButton" parent="."]
-margin_left = 648.0
-margin_top = 664.0
-margin_right = 761.0
-margin_bottom = 704.0
-texture_normal = ExtResource( 69 )
-texture_pressed = ExtResource( 69 )
-texture_focused = ExtResource( 67 )
+[node name="buttons" type="HBoxContainer" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -120.0
+margin_right = -421.0
+margin_bottom = -40.0
+grow_horizontal = 0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_constants/separation = 249
+alignment = 1
 
-[node name="zahajit_obrad" type="TextureButton" parent="."]
-margin_left = 232.0
-margin_top = 664.0
-margin_right = 417.0
-margin_bottom = 704.0
-texture_normal = ExtResource( 71 )
+[node name="zahajit_obrad" type="TextureButton" parent="buttons"]
+margin_left = 148.0
+margin_right = 333.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 70 )
 texture_pressed = SubResource( 3 )
-texture_focused = ExtResource( 70 )
+texture_focused = ExtResource( 71 )
+
+[node name="jak_hrat" type="TextureButton" parent="buttons"]
+margin_left = 582.0
+margin_right = 695.0
+margin_bottom = 80.0
+texture_normal = ExtResource( 67 )
+texture_pressed = ExtResource( 67 )
+texture_focused = ExtResource( 69 )
 
 [node name="door_sprite" type="Sprite" parent="."]
-position = Vector2( 469, 655 )
-scale = Vector2( 1.79847, 1.67053 )
+position = Vector2( 581.054, 875.276 )
+scale = Vector2( 3.17689, 2.49171 )
 texture = ExtResource( 75 )
 
 [node name="how_to" type="TextureRect" parent="."]
@@ -144,5 +159,5 @@ expand = true
 stream = ExtResource( 74 )
 volume_db = -10.0
 
-[connection signal="pressed" from="jak_hrat" to="." method="_on_jak_hrat_pressed"]
-[connection signal="pressed" from="zahajit_obrad" to="." method="_on_zahajit_obrad_pressed"]
+[connection signal="pressed" from="buttons/zahajit_obrad" to="." method="_on_zahajit_obrad_pressed"]
+[connection signal="pressed" from="buttons/jak_hrat" to="." method="_on_jak_hrat_pressed"]

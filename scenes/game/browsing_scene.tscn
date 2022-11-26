@@ -481,38 +481,37 @@ anims/use_3 = SubResource( 24 )
 script = ExtResource( 11 )
 
 [node name="animated_browsing" type="AnimatedSprite" parent="."]
-position = Vector2( -133, 1266.8 )
-scale = Vector2( 0.711111, 0.666667 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.888889, 0.888889 )
 frames = SubResource( 3 )
 frame = 9
-offset = Vector2( 907.031, -1324.21 )
 
 [node name="animated_0" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 512, 384 )
-scale = Vector2( 0.711111, 0.666667 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.889, 0.889 )
 frames = SubResource( 10 )
 animation = "0"
 
 [node name="animated_1" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 512, 384 )
-scale = Vector2( 0.711111, 0.666667 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.889, 0.889 )
 frames = SubResource( 16 )
 animation = "1"
 frame = 15
 
 [node name="animated_2" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 512, 384 )
-scale = Vector2( 0.711111, 0.666667 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.889, 0.889 )
 frames = SubResource( 17 )
 animation = "2"
 
 [node name="animated_3" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 512, 384 )
-scale = Vector2( 0.711111, 0.666667 )
+position = Vector2( 640, 512 )
+scale = Vector2( 0.889, 0.889 )
 frames = SubResource( 18 )
 animation = "3"
 frame = 1

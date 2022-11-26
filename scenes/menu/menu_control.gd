@@ -5,7 +5,7 @@ signal startgame
 var showing = 0
 
 func _ready():
-	$zahajit_obrad.grab_focus()
+	$buttons/zahajit_obrad.grab_focus()
 
 func _on_jak_hrat_pressed():
 	if showing == 0:

@@ -13,13 +13,14 @@ config_version=4
 config/name="Katechumen"
 run/main_scene="res://scenes/main.tscn"
 
-[autoload]
-
-Global="*res://src/Global.gd"
-
 [display]
 
-window/size/height=768
+window/size/width=1280
+window/size/height=1024
+window/size/borderless=true
+window/size/fullscreen=true
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
 
 [gui]
 
@@ -55,6 +56,11 @@ confirm={
 use={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":76,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+key_exit={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
  ]
 }
 
