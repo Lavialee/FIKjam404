@@ -71,6 +71,6 @@ func start_menu():
 	menu.connect("startgame",self,"start_game")
 	self.add_child(menu)
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("key_exit"):
 		get_tree().quit()
