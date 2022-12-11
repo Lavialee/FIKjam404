@@ -2,11 +2,13 @@ extends Node
 
 var game_menu = preload("res://scenes/menu/menu_screen.tscn")
 var game_main = preload("res://scenes/game/game_scene.tscn")
-var scores_node = preload("res://scenes/menu/scores.tscn")
+var naming_node = preload("res://scenes/menu/scores.tscn")
+var player = preload("res://scenes/Player.gd")
 
 var savegame = File.new() #file
 var save_path = "res://data" #place of the file
 var save_data = {"highscore": 0} #variable to store data
+var current_player = player
 
 var menu 
 var game_scene
@@ -17,7 +19,6 @@ func _ready():
 	start_menu()
 	set_process(true)
 	
-
 func start_game():
 	$menu_music.stop()
 	$game_music.play()
@@ -26,40 +27,23 @@ func start_game():
 	yield(get_tree().create_timer(1.8), "timeout")
 	game_scene = game_main.instance()
 	menu.queue_free()
-	game_scene.connect("timerend", self, "high_score")
+	game_scene.connect("timerend", self, "high_score") #až skončí timer, změna sceny na highscore, předává i score
 	self.add_child(game_scene)
 
 func transition():
 	$CanvasLayer/fade.play("fade")
 	pass
 
-func high_score(got_score):
-	scores = scores_node.instance()
+func high_score(current_score): #score je od signalu
+	var naming = naming_node.instance()
 	$game_music.stop()
 	$church_soundscape.stop()
-	self.add_child(scores)
+	self.add_child(naming)
 	game_scene.queue_free()
-	scores.your_score(got_score)
+	naming.your_score(current_score)
 	yield(get_tree().create_timer(2), "timeout")
 	scores.connect("back",self,"start_menu")
 	pass #vyresit specificky na fikmat
-#
-#func create_save():
-#   savegame.open(save_path, File.WRITE)
-#   savegame.store_var(save_data)
-#   savegame.close()
-#
-#func save(high_score):    
-#   save_data["highscore"] = high_score #data to save
-#   savegame.open(save_path, File.WRITE) #open file to write
-#   savegame.store_var(save_data) #store the data
-#   savegame.close() # close the file
-#
-#func read_savegame():
-#   savegame.open(save_path, File.READ) #open the file
-#   save_data = savegame.get_var() #get the value
-#   savegame.close() #close the file
-#   return save_data["highscore"] #return the value
 
 func start_menu():
 	$menu_music.play()

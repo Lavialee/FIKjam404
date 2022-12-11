@@ -1,5 +1,5 @@
 extends Control
-
+class_name Player
 signal startgame
 
 var showing = 0

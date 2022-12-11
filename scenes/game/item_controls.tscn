@@ -6,37 +6,3 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
-
-[node name="Sul" type="Panel" parent="."]
-margin_left = 64.0
-margin_top = 24.0
-margin_right = 104.0
-margin_bottom = 64.0
-focus_neighbour_right = NodePath("../Voda")
-focus_mode = 2
-
-[node name="Voda" type="Panel" parent="."]
-margin_left = 128.0
-margin_top = 24.0
-margin_right = 168.0
-margin_bottom = 64.0
-focus_neighbour_left = NodePath("../Sul")
-focus_neighbour_right = NodePath("../Kriz")
-focus_mode = 2
-
-[node name="Kriz" type="Panel" parent="."]
-margin_left = 192.0
-margin_top = 24.0
-margin_right = 232.0
-margin_bottom = 64.0
-focus_neighbour_left = NodePath("../Voda")
-focus_neighbour_right = NodePath("../Bible")
-focus_mode = 2
-
-[node name="Bible" type="Panel" parent="."]
-margin_left = 256.0
-margin_top = 24.0
-margin_right = 296.0
-margin_bottom = 64.0
-focus_neighbour_left = NodePath("../Kriz")
-focus_mode = 2
