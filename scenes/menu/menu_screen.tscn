@@ -101,7 +101,7 @@ position = Vector2( 640.5, 512.5 )
 scale = Vector2( 1.76657, 1.88745 )
 frames = SubResource( 1 )
 animation = "background"
-frame = 1
+frame = 35
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -148,10 +148,9 @@ texture = ExtResource( 75 )
 
 [node name="how_to" type="TextureRect" parent="."]
 visible = false
-margin_left = 8.0
-margin_top = 104.0
-margin_right = 1032.0
-margin_bottom = 872.0
+margin_top = 272.0
+margin_right = 1280.0
+margin_bottom = 1144.0
 texture = ExtResource( 73 )
 expand = true
 
