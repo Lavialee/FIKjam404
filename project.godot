@@ -23,6 +23,10 @@ _global_script_class_icons={
 config/name="Katechumen"
 run/main_scene="res://scenes/main.tscn"
 
+[autoload]
+
+Escape="*res://escape.gd"
+
 [display]
 
 window/size/width=1280
