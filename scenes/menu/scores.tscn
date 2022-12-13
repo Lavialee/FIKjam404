@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scenes/menu/scores.gd" type="Script" id=1]
+[ext_resource path="res://scenes/menu/Label3.gd" type="Script" id=2]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/BaroqueTextJF.ttf"
@@ -43,48 +44,41 @@ align = 1
 autowrap = true
 
 [node name="Label3" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
 margin_left = 712.0
-margin_top = 592.0
-margin_right = 812.0
-margin_bottom = 692.0
+margin_top = 576.0
+margin_right = 760.0
+margin_bottom = 670.0
 custom_fonts/font = SubResource( 2 )
 text = "3"
 align = 1
 autowrap = true
+script = ExtResource( 2 )
 
 [node name="Label2" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 651.0
-margin_top = 592.0
-margin_right = 751.0
-margin_bottom = 692.0
+margin_left = 648.0
+margin_top = 576.0
+margin_right = 696.0
+margin_bottom = 670.0
 custom_fonts/font = SubResource( 2 )
 text = "2"
 align = 1
 autowrap = true
 
 [node name="Label1" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 587.0
-margin_top = 594.0
-margin_right = 687.0
-margin_bottom = 694.0
+margin_left = 584.0
+margin_top = 576.0
+margin_right = 632.0
+margin_bottom = 670.0
 custom_fonts/font = SubResource( 2 )
 text = "1"
 align = 1
 autowrap = true
 
 [node name="Label0" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 520.0
-margin_top = 592.0
-margin_right = 620.0
-margin_bottom = 692.0
+margin_left = 504.0
+margin_top = 576.0
+margin_right = 584.0
+margin_bottom = 696.0
 custom_fonts/font = SubResource( 2 )
 text = "0"
 align = 1
