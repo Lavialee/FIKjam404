@@ -14,7 +14,7 @@ func baby_type(baby):
         print("vodaaa")
         baby_spawn()
     if baby == 2:
-        var random = randi()%1
+        var random = randi()%2
         if random == 0: 
             self.play("kriz")
             print("krizzz")
@@ -24,7 +24,7 @@ func baby_type(baby):
             print("krizzz")
             baby_spawn()
     if baby == 3:
-        var random = randi()%1
+        var random = randi()%2
         if random == 0: 
             self.play("bible")
             print("bibleee")
