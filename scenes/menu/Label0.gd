@@ -23,7 +23,6 @@ func flash():
 		modulate.a = sinTime
 	visible = _visible
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	time += delta
 	sinTime = sin(time*speed)
