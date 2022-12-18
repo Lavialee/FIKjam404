@@ -1,5 +1,7 @@
 extends Control
+
 const HIGHSCORE_PATH = "res://data/highscore.json"
+
 var scores_count 
 var current_scores := []
 var rows := []
@@ -17,27 +19,40 @@ func _ready():
 		else:
 			Global.scores = []
 	#update scores
-	#add scores to screen
-	_write_scores()
+	_update_scores()
+	_write_scores() 	#add scores to screen
 	pass # Replace with function body.
 
 func _update_scores():
-	pass
+	if Global.player_nick.empty():
+		return
+		
+	var new_score = { "name": Global.player_nick, "score": Global.player_score }
+	var success = false
+	
+	for i in Global.scores.size():
+		if new_score.score > Global.scores[i].score:
+			Global.scores.insert(i, new_score)
+			success = true
+			current_scores.append(i)
+			break
+	
+	if !success:
+		current_scores.append(Global.scores.size())
+		Global.scores.append(new_score)
+
 func _write_scores():
 	for score_row in scores_count:
 		if score_row >= Global.scores.size():
 			break
-		var row
-		if score_row == 0: # override the first row ta je jenom TEST a veci, možná udělat invisible spis
-			row = $Row
-		else: # and then add duplicates na to se budou psát další scores
-			row = $Row.duplicate()
-			row.rect_position.y += 64 + (score_row * 100)
-			add_child(row)
-# tady zjistuje co tam ma byt napsany
+		var row = $Row.duplicate()
+		row.visible = true
+		row.rect_position.y += score_row * 100
+		add_child(row)# tady zjistuje co tam ma byt napsany
+
 		row.get_node("Position").text = str(score_row + 1) + "."
 		row.get_node("Name").text = Global.scores[score_row].name
-		row.get_node("Score").text = Global.scores[score_row].score
+		row.get_node("Score").text = str(Global.scores[score_row].score)
 		rows.append(row) #prida do rows pole
 
 	if Global.scores.size() > 100:

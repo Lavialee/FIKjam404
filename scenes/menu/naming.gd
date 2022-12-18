@@ -5,7 +5,7 @@ var blink = false
 var selected_label = 0
 var letters = [0,0,0,0]
 var labels
-
+var nickname = 0
 signal back
 
 func _ready():
@@ -15,6 +15,7 @@ func _ready():
 	blinking()
 
 func your_score(score):
+	Global.player_score = score
 	yield(get_tree().create_timer(1), "timeout")
 	$ColorRect/Spaseno.text = "Spaseno: "+ str(score)
 	yield(get_tree().create_timer(1), "timeout")
@@ -54,4 +55,7 @@ func _input(event):
 		change_character()
 
 	if event.is_action_pressed("use"):  #use name
+		var nickname = str(ALPHABET[letters[0]]) + str(ALPHABET[letters[1]]) + str(ALPHABET[letters[2]]) + str(ALPHABET[letters[3]])
+		Global.player_nick = nickname
+		#UPDATE NAME
 		emit_signal("back")
