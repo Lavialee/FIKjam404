@@ -4,6 +4,7 @@ var game_menu = preload("res://scenes/menu/menu_screen.tscn")
 var game_main = preload("res://scenes/game/game_scene.tscn")
 var naming_node = preload("res://scenes/menu/naming.tscn")
 var player = preload("res://scenes/Player.gd")
+var highscore_node = preload("res://scenes/menu/highscores.tscn")
 
 var savegame = File.new() #file
 var save_path = "res://data" #place of the file
@@ -12,7 +13,8 @@ var current_player = player
 
 var menu 
 var game_scene
-var scores
+var naming
+var highscores
 
 func _ready():
 	randomize()
@@ -45,12 +47,15 @@ func naming(current_score): #score je od signalu
 	naming.connect("back",self,"start_menu")
 	pass #vyresit specificky na fikmat
 
+func highscores():
+	pass
+
 func start_menu():
 	$menu_music.play()
-	if scores == null:
+	if naming == null:
 		pass
 	else:
-		scores.queue_free()
+		naming.queue_free()
 	menu = game_menu.instance()
 	menu.connect("startgame",self,"start_game")
 	self.add_child(menu)
