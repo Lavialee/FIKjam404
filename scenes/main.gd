@@ -14,7 +14,7 @@ var current_player = player
 var menu 
 var game_scene
 var naming
-var highscores
+var scoreboard
 
 func _ready():
 	randomize()
@@ -29,33 +29,41 @@ func start_game():
 	yield(get_tree().create_timer(1.8), "timeout")
 	game_scene = game_main.instance()
 	menu.queue_free()
-	game_scene.connect("timerend", self, "naming") #až skončí timer, změna sceny na highscore, předává i score
+	game_scene.connect("timerend", self, "name_pick") #až skončí timer, změna sceny na highscore, předává i score
 	self.add_child(game_scene)
 
 func transition():
 	$CanvasLayer/fade.play("fade")
 	pass
 
-func naming(current_score): #score je od signalu
-	var naming = naming_node.instance()
+func name_pick(current_score): #score je od signalu
 	$game_music.stop()
 	$church_soundscape.stop()
+	$menu_music.play()
+	transition()
+	yield(get_tree().create_timer(1.8), "timeout")
+	naming = naming_node.instance()
 	self.add_child(naming)
 	game_scene.queue_free()
 	naming.your_score(current_score)
 	yield(get_tree().create_timer(2), "timeout")
-	naming.connect("back",self,"start_menu")
+	naming.connect("back",self,"highscores")
 	pass #vyresit specificky na fikmat
 
 func highscores():
+	scoreboard = highscore_node.instance()
+	self.add_child(scoreboard)
+	naming.queue_free()
+	scoreboard.connect("back",self,"start_menu")
+
 	pass
 
 func start_menu():
 	$menu_music.play()
-	if naming == null:
+	if scoreboard == null:
 		pass
 	else:
-		naming.queue_free()
+		scoreboard.queue_free()
 	menu = game_menu.instance()
 	menu.connect("startgame",self,"start_game")
 	self.add_child(menu)

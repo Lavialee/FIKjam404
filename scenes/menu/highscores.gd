@@ -1,13 +1,14 @@
 extends Control
 
 const HIGHSCORE_PATH = "res://data/highscore.json"
-
+const BLINK_TIME = 0.4
 var scores_count 
 var current_scores := []
 var rows := []
 var blink := false
 var blink_timer := Timer.new()
 
+signal back
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	scores_count = 10
@@ -21,22 +22,22 @@ func _ready():
 	#update scores
 	_update_scores()
 	_write_scores() 	#add scores to screen
+	yield(get_tree().create_timer(1.0), "timeout") # aby se hned neodkliko
 	pass # Replace with function body.
 
 func _update_scores():
-	if Global.player_nick.empty():
+	if Global.player_nick == null:
 		return
-		
 	var new_score = { "name": Global.player_nick, "score": Global.player_score }
 	var success = false
-	
+
 	for i in Global.scores.size():
 		if new_score.score > Global.scores[i].score:
 			Global.scores.insert(i, new_score)
 			success = true
 			current_scores.append(i)
 			break
-	
+
 	if !success:
 		current_scores.append(Global.scores.size())
 		Global.scores.append(new_score)
@@ -47,7 +48,7 @@ func _write_scores():
 			break
 		var row = $Row.duplicate()
 		row.visible = true
-		row.rect_position.y += score_row * 100
+		row.rect_position.y += score_row * 80
 		add_child(row)# tady zjistuje co tam ma byt napsany
 
 		row.get_node("Position").text = str(score_row + 1) + "."
@@ -60,6 +61,23 @@ func _write_scores():
 
 	write_json_file(HIGHSCORE_PATH, { "scores": Global.scores })
 	pass
+
+func _input(event):
+	if event.is_action_pressed("use"):  #use name
+		emit_signal("back")
+
+func _set_timers() -> void:
+	blink_timer.connect("timeout", self, "_switch_blink")
+	blink_timer.wait_time = BLINK_TIME
+	add_child(blink_timer)
+	blink_timer.start()
+
+func _switch_blink() -> void:
+	for s in current_scores:
+		if s < rows.size():
+			rows[s].visible = blink
+	$Prompt.visible = blink
+	blink = !blink
 
 func parse_json_file(path):
 	var file = File.new()

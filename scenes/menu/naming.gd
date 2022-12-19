@@ -55,7 +55,7 @@ func _input(event):
 		change_character()
 
 	if event.is_action_pressed("use"):  #use name
-		var nickname = str(ALPHABET[letters[0]]) + str(ALPHABET[letters[1]]) + str(ALPHABET[letters[2]]) + str(ALPHABET[letters[3]])
+		nickname = str(ALPHABET[letters[0]]) + str(ALPHABET[letters[1]]) + str(ALPHABET[letters[2]]) + str(ALPHABET[letters[3]])
 		Global.player_nick = nickname
 		#UPDATE NAME
 		emit_signal("back")
