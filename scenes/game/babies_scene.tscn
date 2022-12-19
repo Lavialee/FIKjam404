@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://babies_scene.gd" type="Script" id=1]
 [ext_resource path="res://assets/mimi/bible.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://assets/mimi/kriz2.png" type="Texture" id=5]
 [ext_resource path="res://assets/mimi/kriz.png" type="Texture" id=6]
 [ext_resource path="res://assets/mimi/bible2.png" type="Texture" id=7]
+[ext_resource path="res://assets/mimi/normal caucasian.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,6 +19,11 @@ animations = [ {
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "bible2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "bile",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -55,9 +61,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 672, 408 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.67451, 0.67451, 0.67451, 1 ) ]
+}
 
 [sub_resource type="Animation" id=4]
 resource_name = "despawn"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -65,14 +84,30 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0.5, 1.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 640, 600 ), Vector2( -40, 1360 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.67451, 0.67451, 0.67451, 1 ), Color( 1, 1, 1, 1 ), Color( 0.67451, 0.67451, 0.67451, 1 ), Color( 1, 1, 1, 1 ), Color( 0.67451, 0.67451, 0.67451, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "saving"
 
 [sub_resource type="Animation" id=3]
 resource_name = "spawn"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
@@ -80,21 +115,82 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 0.5, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Vector2( 1344, 1360 ), Vector2( 640, 600 ) ]
+"values": [ Vector2( 1344, 1360 ), Vector2( 1344, 1360 ), Vector2( 640, 600 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AnimationPlayer:current_animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 2,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "water_shake"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 640, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 640, 600 ), Vector2( 630, 600 ), Vector2( 640, 600 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "wrong"
+length = 3.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 0.501961, 0.129412, 0.129412, 1 ), Color( 1, 0.521569, 0.521569, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5, 1.55, 1.6, 1.65, 1.7, 1.75, 1.8, 1.85, 1.9, 1.95, 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.55, 2.6, 2.65, 2.7, 2.75, 2.8, 2.85, 2.9, 2.95, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 640, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 640, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 640, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 630, 600 ), Vector2( 650, 600 ), Vector2( 640, 600 ) ]
 }
 
 [node name="baby_animation" type="AnimatedSprite"]
-visible = false
+modulate = Color( 0.67451, 0.67451, 0.67451, 1 )
 position = Vector2( 672, 408 )
 scale = Vector2( 1.76796, 1.8893 )
 frames = SubResource( 1 )
-animation = "bible2"
+animation = "voda"
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
 anims/despawn = SubResource( 4 )
+anims/saving = SubResource( 5 )
 anims/spawn = SubResource( 3 )
+anims/water_shake = SubResource( 7 )
+anims/wrong = SubResource( 6 )

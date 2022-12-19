@@ -39,6 +39,7 @@ func transition():
 func name_pick(current_score): #score je od signalu
 	$game_music.stop()
 	$church_soundscape.stop()
+	
 	$menu_music.play()
 	transition()
 	yield(get_tree().create_timer(1.8), "timeout")
@@ -55,7 +56,13 @@ func highscores():
 	self.add_child(scoreboard)
 	naming.queue_free()
 	scoreboard.connect("back",self,"start_menu")
+	pass
 
+func leaderboard():
+	scoreboard = highscore_node.instance()
+	self.add_child(scoreboard)
+	menu.queue_free()
+	scoreboard.connect("back",self,"start_menu")
 	pass
 
 func start_menu():
@@ -66,6 +73,7 @@ func start_menu():
 		scoreboard.queue_free()
 	menu = game_menu.instance()
 	menu.connect("startgame",self,"start_game")
+	menu.connect("leaderboard",self, "leaderboard")
 	self.add_child(menu)
 
 func _process(_delta):

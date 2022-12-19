@@ -22,10 +22,12 @@ func _ready():
 	#update scores
 	_update_scores()
 	_write_scores() 	#add scores to screen
+
 	yield(get_tree().create_timer(1.0), "timeout") # aby se hned neodkliko
 	pass # Replace with function body.
 
 func _update_scores():
+	$layer/book.play("default")
 	if Global.player_nick == null:
 		return
 	var new_score = { "name": Global.player_nick, "score": Global.player_score }
@@ -36,11 +38,16 @@ func _update_scores():
 			Global.scores.insert(i, new_score)
 			success = true
 			current_scores.append(i)
+			
+			Global.player_nick = null
+			Global.player_score = null
 			break
 
 	if !success:
 		current_scores.append(Global.scores.size())
 		Global.scores.append(new_score)
+		Global.player_nick = ""
+		Global.player_score = ""
 
 func _write_scores():
 	for score_row in scores_count:
@@ -50,7 +57,6 @@ func _write_scores():
 		row.visible = true
 		row.rect_position.y += score_row * 80
 		add_child(row)# tady zjistuje co tam ma byt napsany
-
 		row.get_node("Position").text = str(score_row + 1) + "."
 		row.get_node("Name").text = Global.scores[score_row].name
 		row.get_node("Score").text = str(Global.scores[score_row].score)

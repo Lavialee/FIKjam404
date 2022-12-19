@@ -8,9 +8,10 @@ onready var baby_type = $baby_type
 onready var baby_animation0 = $baby_animation_node0
 onready var baby_animation1 = $baby_animation_node1
 
-var time = 90
+var time = 5
 var score = 0
 
+var stun = false
 var selected = 0
 var hand = 0
 var baby_number = 0
@@ -22,27 +23,27 @@ func _ready():
 #	yielder = yielder_func()
 
 func _on_controls_browseleft():
-	if animation == 0 and selected != 0 and hand == 0:
+	if animation == 0 and selected != 0 and hand == 0 and stun == false:
 		selected -= 1
 		browse.browse_left_movement()
 
 func _on_controls_browseright():
-	if animation == 0 and selected != 3 and hand == 0:
+	if animation == 0 and selected != 3 and hand == 0 and stun == false:
 		selected += 1
 		browse.browse_right_movement()
 
 func _on_controls_handconfirm():
-	if hand == 0 and animation == 0:
+	if hand == 0 and animation == 0 and stun == false:
 		browse.animate_grab()
 		hand = 1
 		return #animate grab, change state
-	elif hand == 1 and animation == 0:
+	elif hand == 1 and animation == 0 and stun == false:
 		browse.animate_put_down()
 		hand = 0 
 		return #animate lay down, change state
 
 func _on_controls_handuse():
-	if hand == 1 and animation == 0:
+	if hand == 1 and animation == 0 and stun == false:
 		browse.animate_use()
 		animation = 1
 		check_correctness()
@@ -55,6 +56,7 @@ func _on_controls_handuse():
 
 func _on_Timer_timeout():
 	time -= 1
+	$TimeLine.points[1].x -= 10
 	if time <=0:
 		$Timer.stop()
 		emit_signal("timerend", score)
@@ -84,10 +86,21 @@ func check_correctness():
 			return
 
 	if selected != baby_type.baby_heal:
-		time -= 5 
+		if baby_type.baby_heal == 1:
+			baby_animation0.baby_water_shake()
+			baby_animation1.baby_water_shake()
+			baby_type.baby_heal 
+		else:
+			stun = true
+			print(stun)
+			baby_animation0.baby_wrong()
+			baby_animation1.baby_wrong()
+			yield(get_tree().create_timer(3), "timeout")
+			stun = false
+			print(stun)
 		return
 
 func _process(_delta):
 	$Text/Score.text = "Zachránils: "+str(score)
-	$Text/Time.text = "Hodiny: "+str(time)
+
 

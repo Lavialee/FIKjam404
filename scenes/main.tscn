@@ -40,9 +40,11 @@ tracks/0/keys = {
 [node name="Main" type="Node"]
 script = ExtResource( 1 )
 
+[node name="bells" type="AudioStreamPlayer" parent="."]
+
 [node name="menu_music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
-volume_db = 7.428
+volume_db = 8.0
 autoplay = true
 
 [node name="church_soundscape" type="AudioStreamPlayer" parent="."]

@@ -1,6 +1,6 @@
 extends Node2D
 
-const ALPHABET = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+const ALPHABET = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var blink = false
 var selected_label = 0
 var letters = [0,0,0,0]
@@ -34,15 +34,15 @@ func blinking():
 	pass
 
 func _input(event):
-	if event.is_action_pressed("ui_right") or event.is_action_pressed("confirm"): #move one place right
+	if event.is_action_pressed("confirm"): # or event.is_action_pressed("confirm"): #move one place right
 		selected_label = (selected_label + 1) % 4
 		blinking()
-
-	if event.is_action_pressed("ui_left"): #move one place left
-		selected_label = (selected_label - 1)
-		if selected_label == -1:
-			selected_label = 3
-		blinking()
+#
+#	if event.is_action_pressed("ui_left"): #move one place left
+#		selected_label = (selected_label - 1)
+#		if selected_label == -1:
+#			selected_label = 3
+#		blinking()
 
 	if event.is_action_pressed("ui_up"): #move up alphabet
 		letters[selected_label] = (letters[selected_label] + 1) % 26

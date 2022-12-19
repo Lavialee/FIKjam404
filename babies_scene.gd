@@ -30,5 +30,14 @@ func baby_spawn():
 func baby_despawn():
 	$AnimationPlayer.play("despawn")
 	
+func baby_heal():
+	self.play("bile")
+	pass
+func baby_wrong():
+	$AnimationPlayer.play("wrong")
+
+func baby_water_shake():
+	$AnimationPlayer.play("water_shake")
 func baby_saved():
-			self.play("voda")
+	self.play("bile")
+
