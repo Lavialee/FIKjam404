@@ -34,6 +34,8 @@ func baby_type_randomizer():
 		baby_heal = baby_type
 
 func baby_saved():
+	baby_animation0.baby_saved()
+	baby_animation1.baby_saved()
 	baby_heal = 1
 
 func _input(event):
@@ -51,9 +53,12 @@ func _input(event):
 		if busy == false and hand_full == false:
 			browse.animate_grab()
 			hand_full = true
+			yield(get_tree().create_timer(3), "timeout")
 			return #animate grab, change state
+		elif busy == true:
+			print("busy is ", busy, " should be true")
 		elif busy == false and hand_full == true:
-			print("JAK SE TO SEM DOSTANEE")
+			print("busy is ", busy, " should be true")
 			browse.animate_put_down()
 			hand_full = false
 			return #animate lay down, change state
@@ -63,9 +68,9 @@ func _input(event):
 			browse.animate_use()
 			busy = true
 			check_correctness()
-			yield(get_tree().create_timer(1), "timeout")
+			yield(get_tree().create_timer(1), "timeout") 
 			browse.stop(true)
-			busy = false
+#			busy = false TADYTOHLE JE PROBLEM
 			return #animate use, stall until finished, check correctness, state 
 
 func _on_Timer_timeout():
@@ -95,8 +100,6 @@ func check_correctness():
 
 		else:
 			baby_saved()
-			baby_animation0.baby_saved()
-			baby_animation1.baby_saved()
 			return
 
 	if selected != baby_heal:
@@ -105,12 +108,14 @@ func check_correctness():
 			baby_animation1.baby_water_shake()
 		else:
 			busy = true
-			print(busy)
+			print("busy is ", busy, " should be true")
 			baby_animation0.baby_wrong()
 			baby_animation1.baby_wrong()
 			yield(get_tree().create_timer(3), "timeout")
 			busy = false
+			print("busy is ", busy, " should be false")
 		return
 
 func _process(_delta):
 	$Text/Score.text = "Zachránils: "+str(score)
+	print(busy)
