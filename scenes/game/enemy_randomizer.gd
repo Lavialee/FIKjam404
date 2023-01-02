@@ -11,7 +11,7 @@ func baby_type_randomizer():
 	baby = (randi() % 6)
 	if baby == 2 or baby == 3:
 		baby_heal = 2
-	elif baby == 4 or baby ==5:
+	elif baby == 4 or baby == 5:
 		baby_heal = 3
 	else:
 		baby_heal = baby
