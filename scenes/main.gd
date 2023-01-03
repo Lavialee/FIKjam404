@@ -39,7 +39,6 @@ func transition():
 func name_pick(current_score): #score je od signalu
 	$game_music.stop()
 	$church_soundscape.stop()
-	
 	$menu_music.play()
 	transition()
 	yield(get_tree().create_timer(1.8), "timeout")

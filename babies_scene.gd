@@ -25,19 +25,23 @@ func baby_type(baby):
 		baby_spawn()
 
 func baby_spawn():
+	self.show()
 	$AnimationPlayer.play("spawn")
 	
 func baby_despawn():
 	$AnimationPlayer.play("despawn")
+	yield(get_node("AnimationPlayer"), "animation_finished")
+	self.hide()
 	
 func baby_heal():
 	self.play("bile")
 	pass
+
 func baby_wrong():
 	$AnimationPlayer.play("wrong")
 
 func baby_water_shake():
 	$AnimationPlayer.play("water_shake")
+
 func baby_saved():
 	self.play("bile")
-

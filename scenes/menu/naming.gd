@@ -38,12 +38,6 @@ func _input(event):
 		selected_label = (selected_label + 1) % 4
 		blinking()
 #
-#	if event.is_action_pressed("ui_left"): #move one place left
-#		selected_label = (selected_label - 1)
-#		if selected_label == -1:
-#			selected_label = 3
-#		blinking()
-
 	if event.is_action_pressed("ui_up"): #move up alphabet
 		letters[selected_label] = (letters[selected_label] + 1) % 26
 		change_character()

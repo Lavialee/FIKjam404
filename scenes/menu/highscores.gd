@@ -28,7 +28,7 @@ func _ready():
 
 func _update_scores():
 	$layer/book.play("default")
-	if Global.player_nick == "":
+	if Global.player_nick == null:
 		return
 
 	var new_score = { "name": Global.player_nick, "score": Global.player_score }
