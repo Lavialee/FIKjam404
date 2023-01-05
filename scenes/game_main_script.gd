@@ -14,7 +14,7 @@ var selected = 0
 var hand_full = false
 var baby_number = 0
 var busy = false
-
+var baby_busy = false
 var baby_type
 var baby_heal
 
@@ -52,13 +52,14 @@ func _input(event):
 			hand_full = true
 			yield(get_tree().create_timer(3), "timeout")
 			return #animate grab, change state
+
 		elif busy == false and hand_full == true:
 			browse.animate_put_down()
 			hand_full = false
 			return #animate lay down, change state
 
 	if event.is_action_pressed("use"):
-		if busy == false and hand_full == true:
+		if busy == false and hand_full == true and baby_busy == false:
 			browse.animate_use()
 			check_correctness()
 #			browse.stop(true)
@@ -81,20 +82,32 @@ func check_correctness():
 				baby_animation0.baby_despawn()
 				baby_animation1.baby_type(baby_type)
 				baby_number = 1
+				busy = true #waits for the usage animation to end
+				baby_busy = true
+				yield(get_tree().create_timer(1), "timeout") 
+				busy = false
+				yield(get_tree().create_timer(0.5), "timeout")
+				baby_busy = false
 				return
 			if baby_number == 1:
 				baby_animation1.baby_despawn()
 				baby_animation0.baby_type(baby_type)
 				baby_number = 0
+				busy = true #waits for the usage animation to end
+				baby_busy = true
+				yield(get_tree().create_timer(1), "timeout") 
+				busy = false
+				yield(get_tree().create_timer(0.5), "timeout")
+				baby_busy = false
 				return
 		else: #healed to normal baby (water)
-			baby_animation0.baby_saved()
-			baby_animation1.baby_saved()
+			baby_animation0.baby_heal()
+			baby_animation1.baby_heal()
 			baby_heal = 1
+			busy = true
+			yield(get_tree().create_timer(0.9), "timeout") 
+			busy = false
 			return
-		busy = true
-		yield(get_tree().create_timer(1), "timeout") 
-		busy = false
 
 	if selected != baby_heal: #wrong healing item
 		if baby_heal == 1: #baby not satanic, just shakes, no stun

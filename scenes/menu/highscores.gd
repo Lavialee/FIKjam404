@@ -1,6 +1,6 @@
 extends Control
 
-const HIGHSCORE_PATH = "res://data/highscore.json"
+const HIGHSCORE_PATH = "res://highscore.json"
 const BLINK_TIME = 0.4
 var scores_count 
 var current_scores := []

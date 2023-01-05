@@ -1,28 +1,12 @@
 extends AnimatedSprite
 
+const BABYTYPES = ["sul", "voda", "kriz", "kriz2", "bible", "bible2"]
 func _ready():
 	pass # Replace with function body.
 
 func baby_type(baby):
-	self.show()
-	if baby == 0:
-		self.play("sul")
-		baby_spawn()
-	if baby == 1:
-		self.play("voda")
-		baby_spawn()
-	if baby == 2:
-		self.play("kriz")
-		baby_spawn()
-	if baby == 3:
-		self.play("kriz2")
-		baby_spawn()
-	if baby == 4: 
-		self.play("bible")
-		baby_spawn()
-	if baby == 5:
-		self.play("bible2")
-		baby_spawn()
+	self.play(BABYTYPES[baby])
+	baby_spawn()
 
 func baby_spawn():
 	self.show()
@@ -30,12 +14,11 @@ func baby_spawn():
 	
 func baby_despawn():
 	$AnimationPlayer.play("despawn")
-	yield(get_node("AnimationPlayer"), "animation_finished")
+	yield(get_tree().create_timer(1.5), "timeout")
 	self.hide()
 	
 func baby_heal():
 	self.play("bile")
-	pass
 
 func baby_wrong():
 	$AnimationPlayer.play("wrong")
@@ -43,5 +26,3 @@ func baby_wrong():
 func baby_water_shake():
 	$AnimationPlayer.play("water_shake")
 
-func baby_saved():
-	self.play("bile")
