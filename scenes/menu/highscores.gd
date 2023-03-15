@@ -1,16 +1,20 @@
 extends Control
 
-const HIGHSCORE_PATH = "res://highscore.json"
+var score_path_path = OS.get_executable_path().get_base_dir()
+
+var HIGHSCORE_PATH = str(score_path_path) + "/highscore.json"
 const BLINK_TIME = 0.4
 var scores_count 
 var current_scores := []
 var rows := []
 var blink := false
 var blink_timer := Timer.new()
+var skip = false
 
 signal back
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	scores_count = 10
 	if Global.scores.empty():
 		var data = parse_json_file(HIGHSCORE_PATH)
@@ -23,7 +27,8 @@ func _ready():
 	_update_scores()
 	_write_scores() 	#add scores to screen
 
-	yield(get_tree().create_timer(1.0), "timeout") # aby se hned neodkliko
+	yield(get_tree().create_timer(2.5), "timeout") # aby se hned neodkliko
+	skip = true
 	pass # Replace with function body.
 
 func _update_scores():
@@ -39,16 +44,15 @@ func _update_scores():
 			Global.scores.insert(i, new_score)
 			success = true
 			current_scores.append(i)
-			
-			Global.player_nick = ""
-			Global.player_score = ""
+			Global.player_nick = null
+			Global.player_score = null
 			break
 
 	if !success:
 		current_scores.append(Global.scores.size())
 		Global.scores.append(new_score)
-		Global.player_nick = ""
-		Global.player_score = ""
+		Global.player_nick = null
+		Global.player_score = null
 
 func _write_scores():
 	for score_row in scores_count:
@@ -70,7 +74,7 @@ func _write_scores():
 	pass
 
 func _input(event):
-	if event.is_action_pressed("use"):  #use name
+	if event.is_action_pressed("use") and skip == true:  #use name
 		emit_signal("back")
 
 func _set_timers() -> void:

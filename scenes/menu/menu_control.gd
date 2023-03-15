@@ -11,6 +11,7 @@ func _ready():
 func _on_jak_hrat_pressed():
 	if showing == 0:
 		$how_to.show()
+		$page.play()
 		showing = 1
 		return
 

@@ -22,6 +22,8 @@ _global_script_class_icons={
 
 config/name="Katechumen"
 run/main_scene="res://scenes/main.tscn"
+config/icon="res://assets/ikona.png"
+config/windows_native_icon="res://assets/ikona.ico"
 
 [autoload]
 

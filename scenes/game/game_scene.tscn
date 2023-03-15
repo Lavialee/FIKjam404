@@ -1,16 +1,22 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/game_main_script.gd" type="Script" id=1]
 [ext_resource path="res://scenes/game/babies_scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/audio/page_turn.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/salt_shake.wav" type="AudioStream" id=4]
 [ext_resource path="res://scenes/game/background.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/game/browsing_scene.tscn" type="PackedScene" id=6]
-
-[sub_resource type="DynamicFontData" id=22]
-font_path = "res://assets/BaroqueTextJF.ttf"
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = SubResource( 22 )
+[ext_resource path="res://assets/audio/water_splash.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/audio/incantation.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/audio/end_bell.wav" type="AudioStream" id=9]
+[ext_resource path="res://scenes/game/demon_sound.gd" type="Script" id=10]
+[ext_resource path="res://assets/audio/demon0.mp3" type="AudioStream" id=11]
+[ext_resource path="res://assets/audio/demon4.mp3" type="AudioStream" id=12]
+[ext_resource path="res://assets/audio/demon3.mp3" type="AudioStream" id=13]
+[ext_resource path="res://assets/audio/demon1.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/audio/demon2.mp3" type="AudioStream" id=15]
+[ext_resource path="res://assets/audio/laugh0.mp3" type="AudioStream" id=16]
+[ext_resource path="res://assets/audio/laugh1.mp3" type="AudioStream" id=17]
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -363,6 +369,13 @@ tracks/0/keys = {
 "values": [ 4, 6, 9, 10, 11, 12, 13, 14, 15, 14, 13, 12, 11, 10, 9, 6, 4 ]
 }
 
+[sub_resource type="DynamicFontData" id=22]
+font_path = "res://assets/BaroqueTextJF.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 22 )
+
 [node name="game" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -378,17 +391,6 @@ default_color = Color( 0.317647, 0.0431373, 0.0431373, 1 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
-
-[node name="Text" type="CanvasLayer" parent="."]
-layer = 10
-
-[node name="Score" type="Label" parent="Text"]
-margin_left = 32.0
-margin_top = 130.0
-margin_right = 248.0
-margin_bottom = 193.0
-custom_fonts/font = SubResource( 2 )
-text = "Zachránils:"
 
 [node name="baby_animation_node0" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -416,5 +418,43 @@ anims/use_0 = SubResource( 18 )
 anims/use_1 = SubResource( 19 )
 anims/use_2 = SubResource( 20 )
 anims/use_3 = SubResource( 21 )
+
+[node name="baby_sound" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 10 )
+audio_files = [ ExtResource( 16 ), ExtResource( 17 ) ]
+
+[node name="demon_sound" type="AudioStreamPlayer" parent="."]
+script = ExtResource( 10 )
+audio_files = [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 13 ), ExtResource( 12 ) ]
+
+[node name="salt_shake" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -11.0
+
+[node name="page_turn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+
+[node name="water_splash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -9.0
+
+[node name="incantation" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -5.0
+
+[node name="bell" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Text" type="CanvasLayer" parent="."]
+layer = 0
+
+[node name="Score" type="Label" parent="Text"]
+margin_left = 32.0
+margin_top = 130.0
+margin_right = 248.0
+margin_bottom = 193.0
+custom_fonts/font = SubResource( 2 )
+text = "Zachránils:"
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
